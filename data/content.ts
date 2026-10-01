@@ -58,7 +58,7 @@ export const projects = [
 
     tech: ["React", "Next.js", "Tailwind CSS"],
 
-    live: "",
+    live: "https://dennizoclassic-cmp7.onrender.com",
     github: "",
     caseStudy: "/work/denizzo-classic",
   },

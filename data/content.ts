@@ -15,7 +15,6 @@ export const services = [
     title: "Backend & APIs",
     text: "Backend systems, APIs, databases, authentication, integrations, and business logic for scalable products.",
   },
- 
 ];
 
 export const projects = [
@@ -27,12 +26,7 @@ export const projects = [
       "An e-commerce platform for technical and STEM equipment, designed to help customers discover products and place orders online.",
     image: "/projects/technical-drawers.png",
 
-    tech: [
-      "React",
-      "Node.js",
-      "Express",
-      "MongoDB",
-    ],
+    tech: ["React", "Node.js", "Express", "MongoDB"],
 
     live: "https://technicaldrawers.co.ke",
     github: "",
@@ -47,11 +41,7 @@ export const projects = [
       "A modern school website designed to present the institution, academic programs, admissions information, and essential resources to prospective families.",
     image: "/projects/esprings-school.png",
 
-    tech: [
-      "React",
-      "Next.js",
-      "Tailwind CSS",
-    ],
+    tech: ["React", "Next.js", "Tailwind CSS"],
 
     live: "https://espringsschools.com",
     github: "",
@@ -60,21 +50,17 @@ export const projects = [
 
   {
     title: "Denizzo Classic",
-    category: "Personal Portifolio",
+    category: "Personal Portfolio",
     year: "2026",
     description:
-      "A digital resource platform designed to help international students prepare for their journey to Kenya, navigate immigration requirements, and settle into university life.",
+      "A modern personal portfolio website designed to showcase a musicians work through a clean, responsive, and visually engaging interface.",
     image: "/projects/denizzo-classic.png",
 
-    tech: [
-      "React",
-      "Next.js",
-      "Tailwind CSS",
-    ],
+    tech: ["React", "Next.js", "Tailwind CSS"],
 
-    live: "https://riara-international-student-community.netlify.app",
+    live: "",
     github: "",
-    caseStudy: "/work/riara-international",
+    caseStudy: "/work/denizzo-classic",
   },
 ];
 

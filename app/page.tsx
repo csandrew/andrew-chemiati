@@ -19,7 +19,7 @@ export default function Home() {
                 <div>
                     <a href="#home" className="text-2xl font-extrabold tracking-tight">Andrew Chemiati<span className="text-gold">.</span></a>
                     <p className="mt-4 max-w-sm text-sm leading-7 text-white/65">Software Development · Web Applications · Backend & APIs · UI/UX & Frontend systems for businesses.</p>
-                    <a href="#contact" className="mt-6 inline-flex rounded-md bg-gold px-5 py-3 text-sm font-bold text-ink transition hover:bg-white">Start a project</a>
+                    
                 </div>
                 <nav aria-label="Footer navigation">
                     <h2 className="text-sm font-bold uppercase tracking-widest text-gold">Explore</h2>

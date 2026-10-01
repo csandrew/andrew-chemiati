@@ -8,29 +8,47 @@ export function About() {
         <div className="container-x grid gap-14 lg:grid-cols-[.8fr_1.2fr] items-center"><div>
             <p className="section-kicker">About me</p>
             <h2 className="section-title mt-4">Design with purpose; <span className="text-brown">Build with intent.</span></h2>
-            <div className="mt-8 aspect-[4/5] rounded-[2rem] bg-gradient-to-br from-ink via-navy to-gold p-3">
-                <div className="flex h-full items-end rounded-[1.5rem] bg-navy-dark/20 p-6 text-white"><div>
-                    <p className="text-sm text-white/60">PLACEHOLDER PORTRAIT</p>
-                    <p className="mt-1 text-2xl font-bold">Andrew Chemiati</p>
-                    <p className="text-white/60">Software Developer</p>
-                </div>
+            <div className="mt-8 aspect-[4/5] overflow-hidden rounded-[2rem] bg-gradient-to-br from-ink via-navy to-gold p-3">
+                <div className="relative h-full overflow-hidden rounded-[1.5rem]">
+                    <img
+                        src="/projects/i-face.jpg"
+                        alt="Andrew Chemiati"
+                        className="h-full w-full object-cover"
+                    />
+
+                    {/* Dark gradient so text is readable */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent" />
+
+                    {/* Text overlay */}
+                    <div className="absolute bottom-6 left-6 text-white">
+                        <p className="mt-1 text-2xl font-bold">Andrew Chemiati</p>
+                        <p className="text-white/70">Software Developer</p>
+                    </div>
                 </div>
             </div>
         </div>
             <div>
                 <p className="max-w-2xl text-xl leading-9 text-muted">My journey into software development began with a simple curiosity:
-                    how can an idea be turned into something people can actually use?</p>
+                    how can an idea be turned into something people can actually use?</p> <br />
 
                 <p className="max-w-2xl text-xl leading-9 text-muted">With a background in Computer Science and over a year of experience, that curiosity has grown into a passion for creating digital products.
                     I&apos;ve worked through the different stages of development: From understanding a problem and designing a solution to writing code, working with APIs and databases, and bringing ideas to life.
 
                     I&apos;m interested in more than just making things work.
-                    I want to understand the problem behind the code and build solutions that are useful, intuitive, and reliable. </p>
+                    I want to understand the problem behind the code and build solutions that are useful, intuitive, and reliable. </p><br />
 
                 <p className="max-w-2xl text-xl leading-9 text-muted">My goal is to use technology to create useful products, improve how organisations work, and contribute to Africa's digital transformation.</p>
 
-                <div className="mt-8 flex flex-wrap gap-3"><a href="#contact" className="rounded-md bg-ink px-6 py-3 text-sm font-bold text-white">Work with me</a>
-                    <button className="rounded-md border border-navy-dark/10 px-6 py-3 text-sm font-bold">Download CV</button>
+                <div className="mt-8 flex flex-wrap gap-3">
+                    <a
+                        href="https://github.com/csandrew"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="rounded-md bg-gold px-7 py-4 text-sm font-bold text-ink transition hover:opacity-90"
+                    >
+                        GitHub
+                    </a>
+
                 </div>
             </div>
         </div>
@@ -135,31 +153,13 @@ export function Work() {
                                             href={p.live}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="rounded-full bg-ink px-5 py-2.5 text-sm font-medium text-white transition hover:opacity-80"
+                                            className="rounded-md bg-ink px-5 py-2.5 text-sm font-medium text-white transition hover:opacity-80"
                                         >
                                             Live Demo
                                         </a>
                                     )}
 
-                                    {p.github && (
-                                        <a
-                                            href={p.github}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="rounded-full border border-gray-light px-5 py-2.5 text-sm font-medium transition hover:bg-gray-light"
-                                        >
-                                            GitHub 
-                                        </a>
-                                    )}
 
-                                    {p.caseStudy && (
-                                        <a
-                                            href={p.caseStudy}
-                                            className="px-2 py-2.5 text-sm font-medium text-brown"
-                                        >
-                                            Case Study →
-                                        </a>
-                                    )}
                                 </div>
                             </div>
                         </motion.article>
@@ -227,8 +227,26 @@ export function Testimonials() {
                             <div className="text-2xl text-gold" aria-label="5 out of 5 stars">★★★★★</div>
                             <p className="mt-6 text-lg leading-8 sm:text-xl">“{testimonial.text}”</p>
                             <footer className="mt-8 border-t border-navy-dark/10 pt-6">
-                                <p className="font-bold">{testimonial.name}</p>
-                                <p className="text-sm text-muted">{testimonial.role}</p>
+                                <div className="flex items-center gap-3">
+                                    <div>
+                                        <p className="font-bold">{testimonial.name}</p>
+                                        <p className="text-sm text-muted">{testimonial.role}</p>
+                                    </div>
+
+                                    {testimonial.linkedin && (
+                                        <a
+                                            href={testimonial.linkedin}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label={`${testimonial.name} on LinkedIn`}
+                                            className="ml-auto grid h-9 w-9 place-items-center rounded-full border border-navy-dark/10 text-navy-dark/60 transition hover:border-[#0A66C2] hover:bg-[#0A66C2] hover:text-white"
+                                        >
+                                            <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                                <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z" />
+                                            </svg>
+                                        </a>
+                                    )}
+                                </div>
                             </footer>
                         </motion.blockquote>
                     </AnimatePresence>

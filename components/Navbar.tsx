@@ -9,9 +9,46 @@ export default function Navbar() {
         <div className="container-x flex h-20 items-center justify-between">
             <a href="#home" className="font-extrabold tracking-tight text-xl">Andrew Chemiati<span className="text-brown">.</span></a>
             <nav className="hidden md:flex items-center gap-8">{links.map(([label, id]) => <a key={id} href={'#' + id} className="text-sm font-semibold text-navy-dark/70 transition hover:text-brown">{label}</a>)}</nav>
-            <a href="#contact" className="hidden sm:inline-flex rounded-md bg-ink px-5 py-3 text-sm font-bold text-white transition hover:bg-gold hover:text-ink">Start a project</a>
+            <a href="#contact" className="hidden sm:inline-flex rounded-md bg-ink px-5 py-3 text-sm font-bold text-white transition hover:bg-gold hover:text-ink">Work with me</a>
             <button aria-label="Open menu" onClick={() => setOpen(!open)} className="md:hidden text-2xl">{open ? '×' : '☰'}</button>
         </div>
-        <AnimatePresence>{open && <motion.nav initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="md:hidden overflow-hidden border-t border-navy-dark/5 bg-white"><div className="container-x py-4 flex flex-col">{links.map(([label, id]) => <a onClick={() => setOpen(false)} key={id} href={'#' + id} className="py-3 font-semibold">{label}</a>)}</div></motion.nav>}</AnimatePresence>
+
+        <AnimatePresence>
+            {open && (
+                <motion.nav
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.2 }}
+                    className="md:hidden border-t border-navy-dark/5 bg-white"
+                >
+                    <div className="container-x flex flex-col py-4">
+                        {links.map(([label, id]) => (
+                            <a
+                                key={id}
+                                href={`#${id}`}
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    setOpen(false);
+
+                                    // Wait for the exit animation + unmount to finish,
+                                    // then scroll to the target section.
+                                    setTimeout(() => {
+                                        document.getElementById(id)?.scrollIntoView({
+                                            behavior: 'smooth',
+                                            block: 'start',
+                                        });
+                                        history.replaceState(null, '', `#${id}`);
+                                    }, 250);
+                                }}
+                                className="block py-3 font-semibold text-navy-dark"
+                            >
+                                {label}
+                            </a>
+                        ))}
+                    </div>
+                </motion.nav>
+            )}
+        </AnimatePresence>
     </header>
 }

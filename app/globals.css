@@ -45,6 +45,10 @@ body {
   padding: 100px 0;
 }
 
+section[id] {
+  scroll-margin-top: 5rem; /* 80px = navbar height */
+}
+
 .section-kicker {
   color: var(--brown);
   font-weight: 800;

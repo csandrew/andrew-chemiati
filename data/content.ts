@@ -29,8 +29,7 @@ export const projects = [
     tech: ["React", "Node.js", "Express", "MongoDB"],
 
     live: "https://technicaldrawers.co.ke",
-    github: "",
-    caseStudy: "/work/technical-drawers",
+    
   },
 
   {
@@ -44,8 +43,7 @@ export const projects = [
     tech: ["React", "Next.js", "Tailwind CSS"],
 
     live: "https://espringsschools.com",
-    github: "",
-    caseStudy: "/work/esprings-school",
+    
   },
 
   {
@@ -59,40 +57,35 @@ export const projects = [
     tech: ["React", "Next.js", "Tailwind CSS"],
 
     live: "https://dennizoclassic-cmp7.onrender.com",
-    github: "",
-    caseStudy: "/work/denizzo-classic",
+    
   },
 ];
 
 export const testimonials = [
   {
-    name: "Micah Jcob",
-    role: "CEO / NEA Global",
+    name: "Reem Ali",
+    role: "Software Engineer, Tech Solutions Ltd.",
     text: "Design excellence at its best. Our app UI/UX became visually stunning while remaining incredibly user-friendly.",
+    linkedin: "https://www.linkedin.com/in/micah-jcob",
   },
   {
-    name: "Mr. Sam Mngai",
-    role: "Math / Physics Teacher, Nairobi School",
+    name: "Bill Kibet",
+    role: "Machnine Learning Engineer, Tech Solutions Ltd.",
     text: "They crafted a logo that tells our story at a glance. The book-cover design invites readers into the narrative.",
+    linkedin: "https://www.linkedin.com/in/sam-mngai",
   },
   {
-    name: "Micah Jacob",
-    role: "CEO / NEA Global",
+    name: "Mirriam Mwongela",
+    role: "Software Engineer, Tech Solutions Ltd.",
     text: "Design excellence at its best. Our app UI/UX became visually stunning while remaining incredibly user-friendly.",
+    linkedin: "https://www.linkedin.com/in/micah-jacob",
   },
   {
-    name: "Mr. Sam Munga",
-    role: "Math / Physics Teacher, Nairobi School",
+    name: "Najma Magashi",
+    role: "Cybersecurity Engineer, Tech Solutions Ltd.",
     text: "They crafted a logo that tells our story at a glance. The book-cover design invites readers into the narrative.",
+    linkedin: "https://www.linkedin.com/in/sam-munga",
   },
-  {
-    name: "Micah Jaco",
-    role: "CEO / NEA Global",
-    text: "Design excellence at its best. Our app UI/UX became visually stunning while remaining incredibly user-friendly.",
-  },
-  {
-    name: "Mr. Sam Mungai",
-    role: "Math / Physics Teacher, Nairobi School",
-    text: "They crafted a logo that tells our story at a glance. The book-cover design invites readers into the narrative.",
-  },
+  
 ];
+

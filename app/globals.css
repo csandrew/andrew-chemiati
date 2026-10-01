@@ -1,0 +1,68 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Roboto+Slab:wght@100..900&family=Sorts+Mill+Goudy:ital@0;1&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #1C2438;
+  --navy-dark: #171B26;
+
+  --gold: #F1B45A;
+  --gold-muted: #BE9864;
+
+  --white: #F8FAFB;
+  --gray-light: #CED0D5;
+  --gray: #9297A3;
+
+  --brown: #8A6A43;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--navy-dark);
+  font-family: "Marcellus", serif;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--navy-dark);
+}
+
+.container-x {
+  width: min(1180px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.section-kicker {
+  color: var(--brown);
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  font-size: .78rem;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -.04em;
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--navy) 4%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--navy) 4%, transparent) 1px, transparent 1px);
+  background-size: 32px 32px;
+}

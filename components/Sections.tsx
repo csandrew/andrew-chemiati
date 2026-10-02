@@ -286,28 +286,108 @@ export function Testimonials() {
     </section>
 }
 
+'use client';
+import { useForm, ValidationError } from '@formspree/react';
+
 export function Contact() {
-    return <section id="contact" className="section bg-gray-light/25">
-        <div className="container-x grid gap-12 lg:grid-cols-[.8fr_1.2fr] items-start">
-            <div>
-                <p className="section-kicker">Let&apos;s talk</p>
-                <h2 className="section-title mt-4">Have a project in <span className="text-brown">mind?</span></h2>
-                <p className="mt-6 max-w-md leading-8 text-muted">Tell me what you&apos;re building, what you need, and where you want to go. I&apos;ll get back to you with the next step.</p>
-                <div className="mt-10 space-y-5 text-sm">
-                    <p><span className="font-bold">Email</span><br /><span className="text-muted">andreaschemiati@gmail.com</span></p>
-                    <p><span className="font-bold">Phone</span><br /><span className="text-muted">+254 735 916 581</span></p>
-                    <p><span className="font-bold">Location</span><br /><span className="text-muted">Nairobi, Kenya</span></p>
+    const [state, handleSubmit] = useForm("xvkgnjay");
+
+    if (state.succeeded) {
+        return (
+            <section id="contact" className="section bg-gray-light/25">
+                <div className="container-x max-w-xl text-center">
+                    <p className="section-kicker">Message received</p>
+                    <h2 className="section-title mt-4">Thanks for reaching out.</h2>
+                    <p className="mt-6 leading-8 text-muted">
+                        I&apos;ve got your message and I&apos;ll get back to you within a day or two.
+                    </p>
+                    <button
+                        type="button"
+                        onClick={() => window.location.reload()}
+                        className="mt-8 rounded-md border border-navy-dark/10 px-6 py-3 text-sm font-bold transition hover:bg-navy-dark/5"
+                    >
+                        Send another message
+                    </button>
                 </div>
+            </section>
+        );
+    }
+
+    return (
+        <section id="contact" className="section bg-gray-light/25">
+            <div className="container-x grid gap-12 lg:grid-cols-[.8fr_1.2fr] items-start">
+                <div>
+                    <p className="section-kicker">Let&apos;s talk</p>
+                    <h2 className="section-title mt-4">Have a project in <span className="text-brown">mind?</span></h2>
+                    <p className="mt-6 max-w-md leading-8 text-muted">
+                        Tell me what you&apos;re building, what you need, and where you want to go. I&apos;ll get back to you with the next step.
+                    </p>
+                    <div className="mt-10 space-y-5 text-sm">
+                        <p><span className="font-bold">Email</span><br /><span className="text-muted">andreaschemiati@gmail.com</span></p>
+                        <p><span className="font-bold">Phone</span><br /><span className="text-muted">+254 735 916 581</span></p>
+                        <p><span className="font-bold">Location</span><br /><span className="text-muted">Nairobi, Kenya</span></p>
+                    </div>
+                </div>
+
+                <form
+                    onSubmit={handleSubmit}
+                    className="rounded-[2rem] bg-white p-7 shadow-sm sm:p-9"
+                >
+                    <div className="grid gap-5 sm:grid-cols-2">
+                        <label className="text-sm font-semibold">
+                            Name
+                            <input
+                                required
+                                className="mt-2 w-full rounded-xl border border-navy-dark/10 px-4 py-3 outline-none focus:border-brown"
+                                name="name"
+                                placeholder="Your name"
+                            />
+                            <ValidationError prefix="Name" field="name" errors={state.errors} />
+                        </label>
+
+                        <label className="text-sm font-semibold">
+                            Email
+                            <input
+                                required
+                                type="email"
+                                className="mt-2 w-full rounded-xl border border-navy-dark/10 px-4 py-3 outline-none focus:border-brown"
+                                name="email"
+                                placeholder="you@example.com"
+                            />
+                            <ValidationError prefix="Email" field="email" errors={state.errors} />
+                        </label>
+                    </div>
+
+                    <label className="mt-5 block text-sm font-semibold">
+                        Project type
+                        <input
+                            className="mt-2 w-full rounded-xl border border-navy-dark/10 px-4 py-3 outline-none focus:border-brown"
+                            name="project"
+                            placeholder="Website, branding, UI/UX..."
+                        />
+                    </label>
+
+                    <label className="mt-5 block text-sm font-semibold">
+                        Message
+                        <textarea
+                            required
+                            rows={6}
+                            className="mt-2 w-full resize-none rounded-xl border border-navy-dark/10 px-4 py-3 outline-none focus:border-brown"
+                            name="message"
+                            placeholder="Tell me about your project..."
+                        />
+                        <ValidationError prefix="Message" field="message" errors={state.errors} />
+                    </label>
+
+                    <button
+                        type="submit"
+                        disabled={state.submitting}
+                        className="mt-6 rounded-md bg-gold px-7 py-4 font-bold text-ink transition hover:bg-ink hover:text-white disabled:cursor-not-allowed disabled:opacity-50"
+                    >
+                        {state.submitting ? 'Sending...' : 'Send enquiry'}
+                    </button>
+                </form>
             </div>
-            <form className="rounded-[2rem] bg-white p-7 shadow-sm sm:p-9" action="#" method="post">
-                <div className="grid gap-5 sm:grid-cols-2">
-                    <label className="text-sm font-semibold">Name<input required className="mt-2 w-full rounded-xl border border-navy-dark/10 px-4 py-3 outline-none focus:border-brown" name="name" placeholder="Your name" /></label>
-                    <label className="text-sm font-semibold">Email<input required type="email" className="mt-2 w-full rounded-xl border border-navy-dark/10 px-4 py-3 outline-none focus:border-brown" name="email" placeholder="you@example.com" /></label>
-                </div>
-                <label className="mt-5 block text-sm font-semibold">Project type<input className="mt-2 w-full rounded-xl border border-navy-dark/10 px-4 py-3 outline-none focus:border-brown" name="project" placeholder="Website, branding, UI/UX..." /></label>
-                <label className="mt-5 block text-sm font-semibold">Message<textarea required rows={6} className="mt-2 w-full resize-none rounded-xl border border-navy-dark/10 px-4 py-3 outline-none focus:border-brown" name="message" placeholder="Tell me about your project..." /></label>
-                <button className="mt-6 rounded-md bg-gold px-7 py-4 font-bold text-ink transition hover:bg-ink hover:text-white">Send enquiry</button>
-            </form>
-        </div>
-    </section>
+        </section>
+    );
 }

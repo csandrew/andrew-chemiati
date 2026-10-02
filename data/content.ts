@@ -65,27 +65,26 @@ export const testimonials = [
   {
     name: "Reem Ali",
     role: "Software Engineer, Tech Solutions Ltd.",
-    text: "Design excellence at its best. Our app UI/UX became visually stunning while remaining incredibly user-friendly.",
-    linkedin: "https://www.linkedin.com/in/micah-jcob",
+    text: "I studied with Andrew and watched him turn hard problems into clean, working code. He makes everyone around him better.",
+    linkedin: "https://www.linkedin.com/in/reem-ali",
   },
   {
     name: "Bill Kibet",
-    role: "Machnine Learning Engineer, Tech Solutions Ltd.",
-    text: "They crafted a logo that tells our story at a glance. The book-cover design invites readers into the narrative.",
-    linkedin: "https://www.linkedin.com/in/sam-mngai",
+    role: "Machine Learning Engineer, Tech Solutions Ltd.",
+    text: "I've worked alongside Andrew on several builds. He cares about the people using what he makes, not just the code.",
+    linkedin: "https://www.linkedin.com/in/bill-kibet",
   },
   {
     name: "Mirriam Mwongela",
     role: "Software Engineer, Tech Solutions Ltd.",
-    text: "Design excellence at its best. Our app UI/UX became visually stunning while remaining incredibly user-friendly.",
-    linkedin: "https://www.linkedin.com/in/micah-jacob",
+    text: "Andrew was my teammate on our final year project. He takes ownership, sweats the details, and always delivers.",
+    linkedin: "https://www.linkedin.com/in/mirriam-mwongela",
   },
   {
     name: "Najma Magashi",
     role: "Cybersecurity Engineer, Tech Solutions Ltd.",
-    text: "They crafted a logo that tells our story at a glance. The book-cover design invites readers into the narrative.",
-    linkedin: "https://www.linkedin.com/in/sam-munga",
+    text: "I've collaborated with Andrew on multiple projects. He's dependable, security-minded, and easy to build with.",
+    linkedin: "https://www.linkedin.com/in/najma-magashi",
   },
-  
 ];
 

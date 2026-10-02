@@ -200,8 +200,8 @@ export function Testimonials() {
     return <section id="testimonials" className="section">
         <div className="container-x max-w-4xl">
             <div className="text-center">
-                <p className="section-kicker">Client feedback</p>
-                <h2 className="section-title mt-4">What clients <span className="text-brown">say.</span></h2>
+                <p className="section-kicker">Referrals</p>
+                <h2 className="section-title mt-4"> What people I&apos;ve worked with <span className="text-brown">say.</span></h2>
             </div>
             <div
                 className="mt-14"

@@ -78,7 +78,7 @@ export const testimonials = [
     name: "Mirriam Mwongela",
     role: "Data Scientist",
     text: "Andrew was my teammate on our final year project. He takes ownership, sweats the details, and always delivers.",
-    linkedin: "https://www.linkedin.com/in/mirriam-mwongela",
+    linkedin: "https://www.linkedin.com/in/miriammwongela",
   },
   {
     name: "Najma Magashi",

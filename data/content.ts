@@ -64,25 +64,25 @@ export const projects = [
 export const testimonials = [
   {
     name: "Reem Ali",
-    role: "Software Engineer, Tech Solutions Ltd.",
+    role: "Software Engineer",
     text: "I studied with Andrew and watched him turn hard problems into clean, working code. He makes everyone around him better.",
     linkedin: "https://www.linkedin.com/in/reem-bafagih?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },
   {
     name: "Bill Kibet",
-    role: "Machine Learning Engineer, Tech Solutions Ltd.",
+    role: "Machine Learning Engineer",
     text: "I've worked alongside Andrew on several builds. He cares about the people using what he makes, not just the code.",
     linkedin: "https://www.linkedin.com/in/bill-yego-84451a26b?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },
   {
     name: "Mirriam Mwongela",
-    role: "Data Scientist, Tech Solutions Ltd.",
+    role: "Data Scientist",
     text: "Andrew was my teammate on our final year project. He takes ownership, sweats the details, and always delivers.",
     linkedin: "https://www.linkedin.com/in/mirriam-mwongela",
   },
   {
     name: "Najma Magashi",
-    role: "Cybersecurity Engineer, Tech Solutions Ltd.",
+    role: "Cybersecurity Engineer",
     text: "I've collaborated with Andrew on multiple projects. He's dependable, security-minded, and easy to build with.",
     linkedin: "https://www.linkedin.com/in/magashinajmaabdi",
   },

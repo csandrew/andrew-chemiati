@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import { useForm, ValidationError } from '@formspree/react';
 import { services, projects, testimonials } from '@/data/content';
 
 export function About() {
@@ -286,8 +287,8 @@ export function Testimonials() {
     </section>
 }
 
-'use client';
-import { useForm, ValidationError } from '@formspree/react';
+
+
 
 export function Contact() {
     const [state, handleSubmit] = useForm("xvkgnjay");

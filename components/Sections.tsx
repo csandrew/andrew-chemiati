@@ -78,13 +78,13 @@ export function Services() {
     </section>
 }
 
-export function Work() {
+export function Portfolio() {
     return (
-        <section id="work" className="section bg-gray-light/25">
+        <section id="portfolio" className="section bg-gray-light/25">
             <div className="container-x">
                 <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
                     <div>
-                        <p className="section-kicker">Selected work</p>
+                        <p className="section-kicker">Selected projects</p>
                         <h2 className="section-title mt-4">
                             Real problems <span className="text-brown">Real products.</span>
                         </h2>

@@ -53,10 +53,10 @@ export default function Hero() {
                         className="mt-9 flex flex-wrap gap-4"
                     >
                         <a
-                            href="#work"
+                            href="#portfolio"
                             className="rounded-md bg-gold px-7 py-4 font-bold text-ink transition hover:opacity-90"
                         >
-                            View my work
+                            View my portfolio
                         </a>
 
 

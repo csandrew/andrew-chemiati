@@ -114,7 +114,7 @@ export default function Hero() {
                                 {/* Name on image */}
                                 <div className="absolute bottom-6 left-6">
                                     <p className="text-sm font-medium text-white/60">
-                                        Software Developer
+                                        Junior Software Engineer
                                     </p>
 
                                     <h2 className="mt-1 text-2xl font-bold">

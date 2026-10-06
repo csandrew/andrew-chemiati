@@ -23,7 +23,7 @@ export function About() {
                     {/* Text overlay */}
                     <div className="absolute bottom-6 left-6 text-white">
                         <p className="mt-1 text-2xl font-bold">Andrew Chemiati</p>
-                        <p className="text-white/70">Software Developer</p>
+                        <p className="text-white/70">Junior Software Engineer</p>
                     </div>
                 </div>
             </div>
@@ -32,7 +32,7 @@ export function About() {
                 <p className="max-w-2xl text-xl leading-9 text-muted">My journey into software development began with a simple curiosity:
                     how can an idea be turned into something people can actually use?</p> <br />
 
-                <p className="max-w-2xl text-xl leading-9 text-muted">With a background in Computer Science and over a year of experience, that curiosity has grown into a passion for creating digital products.
+                <p className="max-w-2xl text-xl leading-9 text-muted">With a background in Computer Science and over two years of experience, that curiosity has grown into a passion for creating digital products.
                     I&apos;ve worked through the different stages of development: From understanding a problem and designing a solution to writing code, working with APIs and databases, and bringing ideas to life.
 
                     I&apos;m interested in more than just making things work.
